@@ -3,7 +3,20 @@ namespace myImages {
 
     helpers._registerFactory("image", function(name: string) {
         switch(helpers.stringTrim(name)) {
-
+            case "image1":
+            case "friendlypellet":return img`
+. . 1 . . 
+. 1 1 1 . 
+. 1 1 1 . 
+. 1 1 1 . 
+1 1 1 1 1 
+1 1 1 1 1 
+1 1 1 1 1 
+. 1 1 1 . 
+. 1 1 1 . 
+. 1 1 1 . 
+. . 1 . . 
+`;
         }
         return null;
     })

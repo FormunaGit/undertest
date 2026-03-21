@@ -1,4 +1,9 @@
 {
+    "image1": {
+        "data": "hwQFAAsAAAAAABEBAAAAABARERERAAAAEREREREBAAAQEREREQAAAAAAEQEAAAAA",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "friendlypellet"
+    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",
