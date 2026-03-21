@@ -23,7 +23,32 @@ namespace myImages {
 
     helpers._registerFactory("animation", function(name: string) {
         switch(helpers.stringTrim(name)) {
-
+            case "spinningfriendlinesspellet":
+            case "anim1":return [img`
+. . . . . 1 . . . . . 
+. . . . 1 1 1 . . . . 
+. . . . 1 1 1 . . . . 
+. . . . 1 1 1 . . . . 
+. . . 1 1 1 1 1 . . . 
+. . . 1 1 1 1 1 . . . 
+. . . 1 1 1 1 1 . . . 
+. . . . 1 1 1 . . . . 
+. . . . 1 1 1 . . . . 
+. . . . 1 1 1 . . . . 
+. . . . . 1 . . . . . 
+`, img`
+. . . . . . . . . . . 
+. . . . . . . . . . . 
+. . . . . . . . . . . 
+. . . . 1 1 1 . . . . 
+. 1 1 1 1 1 1 1 1 1 . 
+1 1 1 1 1 1 1 1 1 1 1 
+. 1 1 1 1 1 1 1 1 1 . 
+. . . . 1 1 1 . . . . 
+. . . . . . . . . . . 
+. . . . . . . . . . . 
+. . . . . . . . . . . 
+`];
         }
         return null;
     })

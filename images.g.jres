@@ -4,6 +4,13 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "friendlypellet"
     },
+    "anim1": {
+        "namespace": "myAnimations",
+        "id": "anim1",
+        "mimeType": "application/mkcd-animation",
+        "data": "YzgwMDBiMDAwYjAwMDIwMDAwMDAxMDAwMDAwMDAwMTAxMTAwMDAwMDAwMTEwMTAwMDAwMDEwMTEwMDAwMDAxMDExMTEwMDAwMDAxMTExMDEwMDAwMTAxMTExMDAwMDAwMTAxMTAwMDAwMDAwMTEwMTAwMDAwMDEwMTEwMDAwMDAwMDEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMTAxMTAwMDAxMDExMTExMTExMTAxMTExMTExMTExMTAxMTExMTExMTAwMDAxMDExMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA=",
+        "displayName": "spinningfriendlinesspellet"
+    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",
