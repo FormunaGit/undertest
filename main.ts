@@ -1,10 +1,6 @@
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     mainFight()
 })
-sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Player, function (sprite, otherSprite) {
-    sprites.destroy(sprite, effects.spray, 100)
-    hpbar.value += -1
-})
 function initialize_flowey_fight () {
     floweyframes = [img`
         fffffffffffffffffffffffffffffffffffffffffffff
@@ -207,8 +203,14 @@ function initialize_flowey_fight () {
         `, SpriteKind.Player)
     fightaction.scale = 0.2
     fightaction.setPosition(139, 73)
+    your_best_friend = music.createSong(hex`003c000a64030100001c00010a006400f4016400000400000000000000000000000000050000047a010000090002152131003a0002192561006a0002101c92009b00021925c300cc00021521f400fd0002192524012d0102101c55015e0102192586018f01021521b601bf01021925e701f00102101c180221020219254802510202152179028202021925aa02b30202101cda02e3020219250b031403031521253c0345030319252554036c0301266d03760302101c9d03a60303192525ce03d70303172326ff030804021c262f04380403101c2360046904021c1c91049a0403152125c204cb0403192525da04f2040126f204fb0402101c23052c0502192554055d05020e1a84058d05021521ad05b1050126b105b5050127b505be0502172304060d06011c16061f060315212547065006031925255f06770601267806810602101ca806b10603192525d906e206030e1a260a071307031723263b074407031420236b077407011c9c07a507030d1925cd07d60703121e25e507fd070126fd07060802101c2e083708031420265f086808031521259008c1080123c008e5080121`)
+    music.play(your_best_friend, music.PlaybackMode.LoopingInBackground)
     mainFight()
 }
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Player, function (sprite, otherSprite) {
+    sprites.destroy(sprite, effects.spray, 100)
+    hpbar.value += -1
+})
 function mainFight () {
     spawnPellet(30, 30)
     spawnPellet(43, 17)
@@ -305,12 +307,13 @@ function spawnPellet (x: number, y: number) {
 }
 let pellet: Sprite = null
 let gameover: Sprite = null
+let your_best_friend: music.Playable = null
 let fightaction: Sprite = null
 let soul: Sprite = null
+let hpbar: StatusBarSprite = null
 let hptext: fancyText.TextSprite = null
 let flowey: Sprite = null
 let floweyframes: Image[] = []
-let hpbar: StatusBarSprite = null
 initialize_flowey_fight()
 game.onUpdateInterval(100, function () {
     fancyText.setText(hptext, "" + convertToText(hpbar.value) + "/" + convertToText(hpbar.max))
